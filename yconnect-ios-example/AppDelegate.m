@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YConnect.h"
 
 @interface AppDelegate ()
 
@@ -48,4 +49,33 @@
 }
 
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    //コールバックURLに指定したURLだった場合、最初のViewControllerから結果を表示するResultViewControllerに遷移する
+    if ([url.scheme isEqualToString:@"yj-xxx"]) {
+        YConnectManager *yconnect = [YConnectManager sharedInstance];
+        [yconnect parseAuthorizationResponse:url handler:^(NSError *error) {
+            NSLog(@"authorizationCode: %@", yconnect.authorizationCode);
+            
+            if (error) {
+                NSLog(@"%@", [NSString stringWithFormat:@"error1: %@", error.description]);
+            }
+            
+            // アクセストークン、リフレッシュトークン、IDトークンを取得
+            [yconnect fetchAccessToken:yconnect.authorizationCode handler:^(YConnectBearerToken *retAccessToken, NSError *error) {
+                if (error) {
+                    NSLog(@"%@", [NSString stringWithFormat:@"error2: %@", error.description]);
+                } else {
+                    NSString *accessToken = [yconnect accessTokenString];
+                    NSLog(@"accessToken: %@", accessToken);
+                }
+            }];
+        }];
+        
+        return YES;
+    }
+    return NO;
+}
+
 @end
+
