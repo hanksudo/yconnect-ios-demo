@@ -13,9 +13,13 @@
 		8F093C3420601B9000A2B652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F093C3320601B9000A2B652 /* Assets.xcassets */; };
 		8F093C3720601B9000A2B652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F093C3520601B9000A2B652 /* LaunchScreen.storyboard */; };
 		8F093C3A20601B9000A2B652 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F093C3920601B9000A2B652 /* main.m */; };
+		B5AD9382148F252C620E5D10 /* libPods-yconnect-ios-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 380CCADC08E978B4ABAED104 /* libPods-yconnect-ios-example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CB4E0D193EAD27828D7BE01 /* Pods-yconnect-ios-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yconnect-ios-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yconnect-ios-example/Pods-yconnect-ios-example.debug.xcconfig"; sourceTree = "<group>"; };
+		24AD26966DDE7F98960BBDD5 /* Pods-yconnect-ios-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yconnect-ios-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-yconnect-ios-example/Pods-yconnect-ios-example.release.xcconfig"; sourceTree = "<group>"; };
+		380CCADC08E978B4ABAED104 /* libPods-yconnect-ios-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yconnect-ios-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F093C2720601B9000A2B652 /* yconnect-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yconnect-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F093C2A20601B9000A2B652 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8F093C2B20601B9000A2B652 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AD9382148F252C620E5D10 /* libPods-yconnect-ios-example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10104CFB65E9916794413FBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CB4E0D193EAD27828D7BE01 /* Pods-yconnect-ios-example.debug.xcconfig */,
+				24AD26966DDE7F98960BBDD5 /* Pods-yconnect-ios-example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A7C059602534549CF9B1BCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				380CCADC08E978B4ABAED104 /* libPods-yconnect-ios-example.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F093C1E20601B9000A2B652 = {
 			isa = PBXGroup;
 			children = (
 				8F093C2920601B9000A2B652 /* yconnect-ios-example */,
 				8F093C2820601B9000A2B652 /* Products */,
+				10104CFB65E9916794413FBB /* Pods */,
+				6A7C059602534549CF9B1BCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F093C3D20601B9000A2B652 /* Build configuration list for PBXNativeTarget "yconnect-ios-example" */;
 			buildPhases = (
+				E382A84EB013BC854E6F010E /* [CP] Check Pods Manifest.lock */,
 				8F093C2320601B9000A2B652 /* Sources */,
 				8F093C2420601B9000A2B652 /* Frameworks */,
 				8F093C2520601B9000A2B652 /* Resources */,
+				4FBC9ACEDD471594B3AF0E2E /* [CP] Embed Pods Frameworks */,
+				89C613CBD91BAB61E9823124 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FBC9ACEDD471594B3AF0E2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yconnect-ios-example/Pods-yconnect-ios-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89C613CBD91BAB61E9823124 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yconnect-ios-example/Pods-yconnect-ios-example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E382A84EB013BC854E6F010E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yconnect-ios-example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F093C2320601B9000A2B652 /* Sources */ = {
@@ -276,6 +354,7 @@
 		};
 		8F093C3E20601B9000A2B652 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB4E0D193EAD27828D7BE01 /* Pods-yconnect-ios-example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +369,7 @@
 		};
 		8F093C3F20601B9000A2B652 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24AD26966DDE7F98960BBDD5 /* Pods-yconnect-ios-example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

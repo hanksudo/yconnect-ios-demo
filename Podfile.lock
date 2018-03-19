@@ -1,0 +1,22 @@
+PODS:
+  - YConnect (2.0.6)
+
+DEPENDENCIES:
+  - YConnect (from `https://github.com/result0924/yconnect-ios-sdk-YConnectV2_external.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  YConnect:
+    :branch: master
+    :git: https://github.com/result0924/yconnect-ios-sdk-YConnectV2_external.git
+
+CHECKOUT OPTIONS:
+  YConnect:
+    :commit: a23decd2ad8b1b6f8dadee000570242b5c53d756
+    :git: https://github.com/result0924/yconnect-ios-sdk-YConnectV2_external.git
+
+SPEC CHECKSUMS:
+  YConnect: 49c62ab0377b1bb15894215099de5541ea57aa20
+
+PODFILE CHECKSUM: 12aba40eae38d6372ec48f9b485d7b73b1016a3e
+
+COCOAPODS: 1.4.0
