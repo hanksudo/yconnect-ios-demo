@@ -28,7 +28,7 @@
     NSString *state = [util generateState];
     NSString *nonce = [util generateNonce];
     
-    [yconnect requestAuthorizationWithState:state prompt:nil nonce:nonce];
+    [yconnect requestAuthorizationWithState:state prompt:YConnectConfigPromptConsent nonce:nonce];
 }
 
 - (void)didReceiveMemoryWarning {
